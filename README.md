@@ -1,16 +1,63 @@
-# React + Vite
+# 🚀 AWS Vision Tagger
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered serverless web app that automatically detects objects in images using AWS Rekognition and allows searching images by labels.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔥 Features
 
-## React Compiler
+* 📤 Upload images to S3
+* 🧠 Auto-detect objects using AWS Rekognition
+* 🗂 Store labels in DynamoDB
+* 🔍 Search images by tags (e.g., "dog", "cat")
+* ⚡ Fully serverless architecture
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🏗️ Architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+React → API Gateway → Lambda → S3 → Lambda → Rekognition → DynamoDB → Lambda → React
+```
+
+---
+
+## 🛠 Tech Stack
+
+* Frontend: React (Vite)
+* Backend: AWS Lambda
+* API: API Gateway
+* Storage: S3
+* AI: AWS Rekognition
+* Database: DynamoDB
+
+---
+
+## 📸 Demo
+
+👉 Add your deployed link here
+(Example: http://your-bucket.s3-website-...amazonaws.com)
+
+---
+
+## ⚙️ Setup
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 🚀 Future Improvements
+
+* Show confidence score
+* Real-time detection (remove delay)
+* Multi-tag search
+* Authentication (AWS Cognito)
+
+---
+
+## 👨‍💻 Author
+
+Harsh Phuke
